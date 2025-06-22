@@ -13,13 +13,13 @@ services:
       - ./backend:/app
 
   frontend:
-    build: ./frontend
+    build: ./client
     ports:
       - "80:80"
     depends_on:
       - backend
     volumes:
-      - ./frontend:/app
+      - ./client:/app
 
   redis:
     image: redis:alpine
